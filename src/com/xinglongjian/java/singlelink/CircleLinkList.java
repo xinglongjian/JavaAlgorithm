@@ -2,13 +2,13 @@ package com.xinglongjian.java.singlelink;
 
 import java.util.Random;
 
-public class CircleLink
+public class CircleLinkList
 {
    private Node cursor;
    private int size;
    
 
-   public CircleLink()
+   public CircleLinkList()
    {
        cursor=null;
        size=0;
@@ -73,7 +73,7 @@ public class CircleLink
    }
    
    public static void main(String[] args) {
-       CircleLink C = new CircleLink();
+       CircleLinkList C = new CircleLinkList();
        int N = 3; // number of iterations of the game
        Node it;    // the player who is "it"
        Node goose; // the goose
