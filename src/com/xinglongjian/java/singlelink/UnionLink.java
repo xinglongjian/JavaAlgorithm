@@ -1,23 +1,7 @@
 package com.xinglongjian.java.singlelink;
 
-import java.util.Stack;
-
-/**
- * description:合并两个有序的链表，让合并后的链表依然有序
- *
- * @author zwl
- *
- * 2014-4-25 下午03:41:30
- *
- */
 public class UnionLink
 {
-
-    /**
-     * 合并 按从小到大排列（递归版）
-     * @param link1Node
-     * @param link2Node
-     */
     public static Node union(Node link1Node,Node link2Node)
     {
         if(link1Node==null)
@@ -38,11 +22,7 @@ public class UnionLink
         }
         return unionNode;
     }
-    /**
-     * 非递归版
-     * @param link1Node
-     * @param link2Node
-     */
+
     public static Node unionNo(Node link1Node,Node link2Node)
     {
        if(link1Node==null)
@@ -112,19 +92,10 @@ public class UnionLink
             head=head.getNextNode();
         }
         //==============3---5---7---9---11---13---
-//       System.out.println();
-//       System.out.println("递归版");
-//       Node resut= union(node1, node2);
-//       head=resut;
-//       while(head!=null)
-//       {
-//           System.out.print(head.getValue());
-//           System.out.print("---");
-//           head=head.getNextNode();
-//       }
+
        //===========
        System.out.println();
-       System.out.println("非递归版");
+       System.out.println("");
        Node resut1= unionNo(node1, node2);
        head=resut1;
        while(head!=null)

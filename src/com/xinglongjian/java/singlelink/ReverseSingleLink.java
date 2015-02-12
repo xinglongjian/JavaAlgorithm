@@ -1,25 +1,18 @@
 package com.xinglongjian.java.singlelink;
 
-/**
- * description: 将单链表反转
- *
- * @author zwl
- *
- * 2014-4-23 上午09:00:50
- *
- */
+
 public class ReverseSingleLink
 {
     public static Node revSingleLink(Node head)
     {
-        if(head ==null){ //链表为空不能逆序
+        if(head ==null){
             return head;
         }
-        if(head.getNextNode()==null){ //如果只有一个结点，当然逆过来也是同一个
+        if(head.getNextNode()==null){ 
             return head;
         }
-        Node rhead = revSingleLink(head.getNextNode());//先找到反转后的head
-        head.getNextNode().setNextNode(head);//进行反转，将后一个节点的下一个节点设为本身
+        Node rhead = revSingleLink(head.getNextNode());//
+        head.getNextNode().setNextNode(head);//
         head.setNextNode(null);
         return rhead; 
    }

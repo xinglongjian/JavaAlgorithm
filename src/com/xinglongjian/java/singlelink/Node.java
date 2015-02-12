@@ -1,11 +1,8 @@
 package com.xinglongjian.java.singlelink;
 
 /**
- * description: 单链表节点
- *
- * @author zwl
- *
- * 2014-4-23 上午08:59:27
+ * 
+ * @author root
  *
  */
 public class Node

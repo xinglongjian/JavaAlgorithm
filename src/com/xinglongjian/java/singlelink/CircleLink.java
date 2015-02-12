@@ -2,31 +2,18 @@ package com.xinglongjian.java.singlelink;
 
 import java.util.Random;
 
-/**
- * description:环形链表，next指向第一个node
- *
- * @author zwl
- *
- * 2014年7月9日 下午4:57:11
- *
- */
 public class CircleLink
 {
-   private Node cursor;//当前节点
-   private int size;//节点总数
+   private Node cursor;
+   private int size;
    
-   /**
-    * 创建一个空的链表
-    */
+
    public CircleLink()
    {
        cursor=null;
        size=0;
    }
-   /**
-    * 返回总数
-    * @return
-    */
+
    public int size()
    {
        return size;
@@ -37,18 +24,13 @@ public class CircleLink
        return cursor;
    }
    
-   /**
-    * 下一个
-    */
+
    public void advance()
    {
        cursor=cursor.getNextNode();
    }
    
-   /**
-    * 添加新节点
-    * @param newNode
-    */
+
    public void add(Node newNode)
    {
        if(cursor==null)
@@ -64,10 +46,7 @@ public class CircleLink
        size++;
    }
    
-   /**
-    * 移除节点
-    * @return
-    */
+
    public Node remove()
    {
        Node oldNode=cursor.getNextNode();

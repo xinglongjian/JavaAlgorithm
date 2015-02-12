@@ -1,21 +1,13 @@
 package com.xinglongjian.java.sort;
 
-import java.util.ArrayList;
 
 /**
- * description:插入排序
- *
- * @author zwl
- *
- * 2014��1��8�� ����2:25:11
+ * Insert Sort
+ * @author root
  *
  */
 public class InsertSort
 {
-    /**
-     * 
-     * @param a
-     */
     public void insertSort(int[] a)
     {
         for(int j=1;j<a.length;j++)
@@ -26,7 +18,6 @@ public class InsertSort
                 a[i]=a[i-1];
                 i--;
             }
-               
             a[i]=temp;
         }
         System.out.println(a);
