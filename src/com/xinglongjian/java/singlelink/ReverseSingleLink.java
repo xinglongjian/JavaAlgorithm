@@ -1,9 +1,9 @@
 package com.xinglongjian.java.singlelink;
 
 
-public class ReverseSingleLink
+public class ReverseSingleLink<E>
 {
-    public static Node revSingleLink(Node head)
+    public static Node<E> revSingleLink(Node<E> head)
     {
         if(head ==null){
             return head;

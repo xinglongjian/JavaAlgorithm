@@ -5,9 +5,10 @@ package com.xinglongjian.java.singlelink;
  * @author root
  *
  */
-public class SinglyLInkList {
-	private Node head=null;
-	private Node tail=null;
+public class SinglyLInkList<E> {
+	
+	private Node<E> head=null;
+	private Node<E> tail=null;
 	private int size=0;
 	
 	public SinglyLInkList(){}
@@ -21,24 +22,23 @@ public class SinglyLInkList {
 		return size==0;
 	}
 	
-	public int first()
+	public E first()
 	{
 		if(isEmpty())
-			return 0;
+			return null;
 		return head.getValue();
 	}
 	
-	public int last()
+	public E last()
 	{
 		if(isEmpty())
-			return 0;
+			return null;
 		return tail.getValue();
 	}
 	
-	public void addFirst(int v)
+	public void addFirst(E v)
 	{
-		Node node=new Node(v);
-		node.setNextNode(head);
+		Node<E> node=new Node<E>(v,head);
 		head=node;
 		if(size==0)
 			tail=head;
@@ -46,10 +46,9 @@ public class SinglyLInkList {
 		
 	}
 	
-	public void addLast(int v)
+	public void addLast(E v)
 	{
-		Node node=new Node(v);
-		node.setNextNode(null);
+		Node<E> node=new Node<E>(v,null);
 		if(size==0)
 			head=node;
 		else
@@ -58,11 +57,11 @@ public class SinglyLInkList {
 		size++;
 	}
 	
-	public int removeFirst()
+	public E removeFirst()
 	{
-		int v=0;
+		E v=null;
 		if(size==0)
-			v=0;
+			v=null;
 		if(size==1)
 		{
 			v=head.getValue();
