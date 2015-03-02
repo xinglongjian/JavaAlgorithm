@@ -1,6 +1,5 @@
 package com.xinglongjian.java.singlelink;
 
-import java.util.Random;
 /**
  * 
  * @author root
