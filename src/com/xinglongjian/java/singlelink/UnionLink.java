@@ -2,14 +2,14 @@ package com.xinglongjian.java.singlelink;
 
 public class UnionLink
 {
-    public static Node union(Node link1Node,Node link2Node)
+    public static Node<Integer> union(Node<Integer> link1Node,Node<Integer> link2Node)
     {
         if(link1Node==null)
             return link2Node;
         if(link2Node==null)
             return link1Node;
         
-        Node unionNode=null;
+        Node<Integer> unionNode=null;
         if(link1Node.getValue()<link2Node.getValue())
         {
             unionNode=link1Node;
@@ -23,14 +23,14 @@ public class UnionLink
         return unionNode;
     }
 
-    public static Node unionNo(Node link1Node,Node link2Node)
+    public static Node<Integer> unionNo(Node<Integer> link1Node,Node<Integer> link2Node)
     {
        if(link1Node==null)
            return link2Node;
        if(link2Node==null)
            return link1Node;
        
-       Node unionNode=link1Node;
+       Node<Integer> unionNode=link1Node;
        while(link1Node!=null&&link2Node!=null)
        {
            if(link1Node.getValue()<link2Node.getValue())
@@ -52,18 +52,18 @@ public class UnionLink
     
     public static void main(String[] args)
     {
-        Node node1=new Node(1);
-        Node temp=null,temp2=null;
+        Node<Integer> node1=new Node<Integer>(1,null);
+        Node<Integer> temp=null,temp2=null;
         for(int i=2;i<10;i+=2)
         {
-            temp=new Node(i);
+            temp=new Node<Integer>(i,null);
             if(i==2)
                 node1.setNextNode(temp);
             else
                 temp2.setNextNode(temp);
             temp2=temp;
         }
-        Node head=node1;
+        Node<Integer> head=node1;
         while(head!=null)
         {
             System.out.print(head.getValue());
@@ -72,12 +72,12 @@ public class UnionLink
         }
         //================1---2---4---6---8---
         System.out.println();
-        Node node2=new Node(3);
+        Node<Integer> node2=new Node<Integer>(3,null);
         temp=null;
         temp2=null;
         for(int i=5;i<15;i+=2)
         {
-            temp=new Node(i);
+            temp=new Node<Integer>(i,null);
             if(i==5)
                 node2.setNextNode(temp);
             else
